@@ -57,9 +57,6 @@ export default function Hero() {
             <h1 className="font-serif text-5xl tracking-[0.2em] sm:text-6xl md:text-7xl">
               CLUB DES NAGEURS
             </h1>
-            <p className="max-w-md text-xs uppercase tracking-[0.35em] text-white/80">
-              The scent of showing up.
-            </p>
           </motion.div>
         </motion.div>
       </div>
