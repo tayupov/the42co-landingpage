@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -19,9 +19,45 @@ const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://clubdesnageurs.com";
+const SITE_TITLE = "Club des Nageurs — The Scent of Showing Up";
+const SITE_DESCRIPTION =
+  "Club des Nageurs bottles the scent of showing up: aquatic citrus over warm, clean skin. Light enough to wear anywhere, confident enough to notice.";
+
 export const metadata: Metadata = {
-  title: "Club des Nageurs",
-  description: "[Placeholder brand description]",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: "%s — Club des Nageurs",
+  },
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Club des Nageurs",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
 };
 
 export default function RootLayout({

@@ -37,6 +37,9 @@ export default function Hero() {
         >
           <video
             key={isMobile ? "mobile" : "desktop"}
+            ref={(el) => {
+              if (el) el.playbackRate = 0.75;
+            }}
             className="absolute inset-0 h-full w-full object-cover object-[30%_center] opacity-70 md:object-center"
             autoPlay
             muted
@@ -55,7 +58,7 @@ export default function Hero() {
               CLUB DES NAGEURS
             </h1>
             <p className="max-w-md text-xs uppercase tracking-[0.35em] text-white/80">
-              Effortless Confidence. Bottled.
+              The scent of showing up.
             </p>
           </motion.div>
         </motion.div>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LegalPageLayout from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
-  title: "Imprint — Club des Nageurs",
+  title: "Imprint",
 };
 
 export default function ImpressumPage() {
