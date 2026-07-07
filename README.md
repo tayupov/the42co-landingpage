@@ -17,8 +17,3 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
-
-## Structure
-
-- `src/app` — pages (home, privacy policy, terms, impressum)
-- `src/components` — shared components (`Hero`, `Footer`, `LegalPageLayout`)
