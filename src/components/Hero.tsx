@@ -29,8 +29,8 @@ export default function Hero() {
   const textOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
 
   return (
-    <div ref={containerRef} className="relative h-[180dvh]">
-      <div className="sticky top-0 flex h-dvh w-full items-center justify-center overflow-hidden bg-white dark:bg-black">
+    <div ref={containerRef} className="relative h-[180svh]">
+      <div className="sticky top-0 flex h-svh w-full items-center justify-center overflow-hidden bg-white dark:bg-black">
         <motion.div
           style={{ scale, borderRadius }}
           className="relative h-full w-full overflow-hidden bg-black"
