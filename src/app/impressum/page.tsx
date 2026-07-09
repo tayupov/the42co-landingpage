@@ -32,7 +32,7 @@ export default function ImpressumPage() {
         <h2 className="mb-2 text-base font-medium text-zinc-800 dark:text-zinc-200">
           Contact
         </h2>
-        <p>Email: hello@clubdesnageurs.com</p>
+        <p>Email: hello@the42co.com</p>
       </section>
 
       <section>

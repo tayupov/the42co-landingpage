@@ -1,6 +1,6 @@
-# Club des Nageurs — Landing Page
+# The 42 Co. — Landing Page
 
-Landing page for Club des Nageurs, a swim club, built with Next.js and Tailwind CSS.
+Landing page for The 42 Co., a fragrance brand, built with Next.js and Tailwind CSS.
 
 ## Stack
 

@@ -2,8 +2,8 @@ import Link from "next/link";
 
 
 const SOCIAL_LINKS = [
-  { href: "https://www.instagram.com/clubdesnageurs", label: "Instagram"},
-  { href: "https://www.tiktok.com/@clubdesnageurs", label: "TikTok"},
+  { href: "https://www.instagram.com/the42co", label: "Instagram"},
+  { href: "https://www.tiktok.com/@the42co", label: "TikTok"},
 ];
 
 export default function Footer() {
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="mt-8 text-center text-xs text-zinc-400 dark:text-zinc-600">
-        © {new Date().getFullYear()} Club des Nageurs. All rights reserved.
+        © {new Date().getFullYear()} The 42 Co. All rights reserved.
       </p>
     </footer>
   );

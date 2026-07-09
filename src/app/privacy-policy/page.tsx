@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
           <br />
           14193 Berlin, Germany
           <br />
-          hello@clubdesnageurs.com
+          hello@the42co.com
         </p>
       </section>
 
@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
         </h2>
         <p>
           This website does not currently offer a contact form. If you email
-          us at hello@clubdesnageurs.com, we use the information you provide
+          us at hello@the42co.com, we use the information you provide
           only to respond to your inquiry.
         </p>
       </section>

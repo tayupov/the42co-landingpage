@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
@@ -16,19 +17,19 @@ const geistMono = Geist_Mono({
 const cormorant = Cormorant_Garamond({
   variable: "--font-serif",
   weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://clubdesnageurs.com";
-const SITE_TITLE = "Club des Nageurs — The Scent of Showing Up";
-const SITE_DESCRIPTION =
-  "Club des Nageurs bottles the scent of showing up: aquatic citrus over warm, clean skin. Light enough to wear anywhere, confident enough to notice.";
+const SITE_URL = "https://the42co.com";
+const SITE_TITLE = "The 42 Co.";
+const SITE_DESCRIPTION = "";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_TITLE,
-    template: "%s — Club des Nageurs",
+    template: "%s — The 42 Co.",
   },
   description: SITE_DESCRIPTION,
   alternates: {
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: "Club des Nageurs",
+    siteName: "The 42 Co.",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     locale: "en_US",
@@ -71,6 +72,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
+        <Header />
         {children}
         <Footer />
       </body>
