@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
   { href: "/les-recoltes-majeures-la-rose", label: "Les Récoltes Majeures La Rose" },
   { href: "/eine-sonniger-auszeit", label: "Eine sonniger Auszeit" },
 ];
@@ -98,14 +97,14 @@ export default function Header() {
             <motion.nav
               key="panel"
               aria-label="Site menu"
-              className="fixed inset-y-0 left-0 z-50 flex h-full w-[85vw] max-w-sm flex-col gap-8 bg-white px-6 py-6 shadow-xl dark:bg-black"
+              className="fixed inset-y-0 left-0 z-50 flex h-full w-[85vw] max-w-sm flex-col gap-8 bg-white/95 px-6 py-6 shadow-xl dark:bg-black/95"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween", duration: 0.32, ease: [0.32, 0.72, 0, 1] }}
             >
               <div className="flex items-center justify-between">
-                <p className="text-xs font-medium tracking-[0.25em] uppercase">Menu</p>
+                <p className="text-xs font-medium tracking-[0.25em] uppercase">The 42 Co.</p>
                 <button
                   aria-label="Close menu"
                   onClick={() => setOpen(false)}
@@ -120,7 +119,7 @@ export default function Header() {
                     <Link
                       href={href}
                       onClick={() => setOpen(false)}
-                      className="text-lg text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+                      className="font-serif text-lg text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
                     >
                       {label}
                     </Link>
