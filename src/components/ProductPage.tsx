@@ -66,12 +66,12 @@ function AccordRow({ note }: { note: ScentNote }) {
         <Image
           src={icon}
           alt=""
-          width={24}
-          height={24}
-          className="h-6 w-6 shrink-0 rounded-full object-cover"
+          width={30}
+          height={30}
+          className="h-[30px] w-[30px] shrink-0 rounded-full object-cover"
         />
       ) : (
-        <span className="h-6 w-6 shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800" />
+        <span className="h-[30px] w-[30px] shrink-0 rounded-full bg-zinc-100 dark:bg-zinc-800" />
       )}
       <div className="flex flex-col">
         <span>{note.nameEn}</span>
