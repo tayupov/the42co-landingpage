@@ -12,7 +12,7 @@ const PASSIONFRUIT_DATA: ProductPageProps = {
   scentPyramid: {
     topNotes: [
       { name: "Passionsfrucht", nameEn: "Passion Fruit", prominence: 5 },
-      { name: "Drachenfrucht", nameEn: "Dragon Fruit (Pitahaya)", prominence: 3 },
+      { name: "Drachenfrucht", nameEn: "Dragon Fruit", prominence: 3 },
     ],
     heartNotes: [
       { name: "Zuckerwatte", nameEn: "Cotton Candy", prominence: 2 },

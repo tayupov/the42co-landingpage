@@ -52,7 +52,7 @@ function NoteRow({ note }: { note: ScentNote }) {
 
 const ACCORD_ICONS: Partial<Record<string, string>> = {
   Juniper: "/accords/juniper.webp",
-  "Vetiveryl Acetate": "/accords/vetiver.webp",
+  "Vetiveryl": "/accords/vetiver.webp",
   Sandalwood: "/accords/sandalwood.webp",
   "Passion Fruit": "/accords/passion-fruit.webp",
   "Cotton Candy": "/accords/cotton-candy.webp",
@@ -260,10 +260,6 @@ export default function ProductPage({
               </li>
             ))}
           </ul>
-
-          <p className="text-center text-sm text-zinc-500 dark:text-zinc-400">
-            Prev &nbsp; 1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; Next
-          </p>
         </div>
       </section>
     </div>

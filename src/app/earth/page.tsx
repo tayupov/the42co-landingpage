@@ -17,7 +17,7 @@ const EARTH_DATA: ProductPageProps = {
       { name: "roter Pfeffer", nameEn: "Pink Pepper", prominence: 2 },
     ],
     heartNotes: [
-      { name: "Vetiverylacetat", nameEn: "Vetiveryl Acetate", prominence: 4 },
+      { name: "Vetiveryl", nameEn: "Vetiveryl", prominence: 4 },
       { name: "Zeder", nameEn: "Cedar", prominence: 4 },
       { name: "Basilikum", nameEn: "Basil", prominence: 2 },
       { name: "Estragon", nameEn: "Tarragon", prominence: 1 },
