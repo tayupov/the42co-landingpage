@@ -59,7 +59,7 @@ export default function Header() {
             aria-label="Open menu"
             aria-expanded={open}
             onClick={() => setOpen(true)}
-            className={`flex w-7 cursor-pointer items-center justify-center ${overlay ? "text-white" : ""}`}
+            className="flex w-7 cursor-pointer items-center justify-center"
           >
             <svg
               width="22"
@@ -75,12 +75,12 @@ export default function Header() {
           </button>
           <Link href="/" aria-label="The 42 Co.">
             <Image
-              src={overlay ? "/logo-mark-white.png" : "/logo-mark.png"}
+              src="/logo-mark.png"
               alt="The 42 Co."
               width={44}
               height={44}
               priority
-              className={`h-11 w-11 ${overlay ? "" : "dark:invert"}`}
+              className="h-11 w-11"
             />
           </Link>
           <div className="w-7" />
@@ -109,7 +109,16 @@ export default function Header() {
               transition={{ type: "tween", duration: 0.32, ease: [0.32, 0.72, 0, 1] }}
             >
               <div className="flex items-center justify-between">
-                <p className="text-xs font-medium tracking-[0.25em] uppercase">The 42 Co.</p>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/logo-mark.png"
+                    alt="The 42 Co."
+                    width={32}
+                    height={32}
+                    className="h-8 w-8"
+                  />
+                  <p className="font-sans text-xs font-medium tracking-[0.25em] uppercase">The 42 Co.</p>
+                </div>
                 <button
                   aria-label="Close menu"
                   onClick={() => setOpen(false)}
@@ -118,19 +127,25 @@ export default function Header() {
                   ✕
                 </button>
               </div>
-              <ul className="flex flex-col gap-6">
-                {NAV_LINKS.map(({ href, label }) => (
-                  <li key={href}>
-                    <Link
-                      href={href}
-                      onClick={() => setOpen(false)}
-                      className="font-sans text-lg text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              
+              <div className="flex flex-col gap-3">
+                <p className="font-sans text-xs font-medium tracking-[0.25em] text-zinc-400 uppercase dark:text-zinc-500">
+                  Products
+                </p>
+                <ul className="flex flex-col gap-1">
+                  {NAV_LINKS.map(({ href, label }) => (
+                    <li key={href}>
+                      <Link
+                        href={href}
+                        onClick={() => setOpen(false)}
+                        className="font-sans text-lg text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.nav>
           </>
         )}

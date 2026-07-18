@@ -34,6 +34,8 @@ const EARTH_DATA: ProductPageProps = {
     longevity: { value: 7.4, count: 608 },
     sillage: { value: 7.2, count: 602 },
   },
+  heroImage: "/earth-bottle-straight.png",
+  conceptImage: "/earth-concept.png",
 };
 
 export default function Page() {

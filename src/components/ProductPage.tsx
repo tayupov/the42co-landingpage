@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export type ScentNote = { name: string; nameEn: string; prominence: number };
 
@@ -18,23 +19,8 @@ export type ProductPageProps = {
     sillage: { value: number; count: number };
   };
   conceptImage?: string;
+  heroImage?: string;
 };
-
-function ImagePlaceholder({
-  label,
-  className = "",
-}: {
-  label: string;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-100 text-center text-xs text-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-600 ${className}`}
-    >
-      {label}
-    </div>
-  );
-}
 
 function DotRating({ level }: { level: number }) {
   const clamped = Math.max(0, Math.min(5, Math.round(level)));
@@ -113,15 +99,22 @@ export default function ProductPage({
   scentPyramid,
   ratings,
   conceptImage,
+  heroImage,
 }: ProductPageProps) {
   return (
     <div className="bg-white text-zinc-900 dark:bg-black dark:text-zinc-100">
       {/* Hero */}
       <section className="mx-auto grid max-w-6xl items-start gap-8 px-6 pt-6 pb-12 md:grid-cols-2 md:gap-10 md:pt-8 md:pb-16">
-        <ImagePlaceholder
-          label="[placeholder-image.jpg]"
-          className="aspect-[3/4] w-full md:max-h-[640px] md:object-cover"
-        />
+        {heroImage ? (
+          <div className="relative aspect-[3/4] w-full md:max-h-[min(640px,calc(100svh-173px))]">
+            <Image src={heroImage} alt="" fill className="object-contain" />
+          </div>
+        ) : (
+          <ImagePlaceholder
+            label="[placeholder-image.jpg]"
+            className="aspect-[3/4] w-full md:max-h-[min(640px,calc(100svh-173px))] md:object-cover"
+          />
+        )}
 
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-1.5">
@@ -243,7 +236,6 @@ export default function ProductPage({
             <h2 className="font-sans text-4xl font-medium tracking-tight sm:text-5xl">Customer Reviews</h2>
             <div className="mt-3 flex items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
               <span>4.9 stars based on [24] Reviews</span>
-              <button className="underline underline-offset-4">Write a review</button>
             </div>
           </div>
 

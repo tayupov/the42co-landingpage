@@ -1,25 +1,16 @@
+import BrandStory from "@/components/BrandStory";
 import Hero from "@/components/Hero";
-import ProductSection from "@/components/ProductSection";
+import Journal from "@/components/Journal";
+import { getAllPosts } from "@/lib/posts";
 
 export default function Home() {
+  const posts = getAllPosts();
+
   return (
     <>
       <Hero />
-      <ProductSection
-        eyebrow="Fresh · Woody · Green"
-        title="Earth"
-        href="/earth"
-        className="bg-gradient-to-br from-emerald-200 via-lime-100 to-stone-300"
-      />
-      <ProductSection
-        eyebrow="Fresh · Sweet · Fruity"
-        title="Passionfruit"
-        href="/passionfruit"
-        className="bg-gradient-to-br from-orange-200 via-rose-100 to-yellow-100"
-        image="/passionfruit-home.png"
-        imagePosition="center 85%"
-        contentAlign="start"
-      />
+      <BrandStory />
+      <Journal posts={posts} />
     </>
   );
 }

@@ -1,3 +1,6 @@
+# Dev Behaviour
+Don't run server or do screenshots of the final site unless explictly told to.
+
 # Fonts
 
 Two font families are configured in [layout.tsx](src/app/layout.tsx):
