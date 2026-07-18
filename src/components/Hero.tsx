@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div className="flex h-svh w-full flex-col bg-[url('/passionfruit-hero-mobile.png')] bg-cover bg-[center_65%] pt-12 sm:grid sm:grid-cols-[1fr_2fr] sm:bg-[url('/passionfruit-hero.png')]">
-      <div className="flex flex-1 flex-col justify-end gap-4 px-6 pb-8 sm:justify-center sm:px-10 sm:pb-16">
+      <div className="flex flex-1 flex-col justify-end gap-3 px-5 pb-6 sm:justify-center sm:gap-4 sm:px-10 sm:pb-16">
         <h1 className="font-sans text-4xl font-bold tracking-tight text-stone-900 sm:text-4xl md:text-5xl">
           Find your spark.
         </h1>
